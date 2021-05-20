@@ -1,2 +1,2 @@
 Author: Bharath Sreenivas
-My personal website: bharathsreenivas.net
+My personal portfolio website, showcasing projects, experiences, and things I love!
