@@ -46,11 +46,44 @@
 								<div class="inner">
 									<header class="major">
 										<h1>Amazon: Software Engineering Internship</h1>
-									</header>
-									<span class="image main"><img src="images/amazon-logo.png" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
-									<p>Currently interning for Amazon Web Services. Check back later for a full update!</p>
+                                    </header>
+                                    <span class="image main"><img src="images/amazon-logo.png" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
+                                    <label for="message" style="font-size: 30px;">Overview</label>
+                                    <p>
+                                        During Summer 2021, I interned at Amazon Web Services on the builder tools team. This team
+                                        owns all code review software used by Amazon engineers, and the product I worked on was 
+                                        Amazon's internal version of GitHub. One of my main projects involved supporting voting on comments
+                                        in code reviews. Below, you can see the results of my work and how I implemented it.
+                                    </p>
+                                    <video width="800px" height="400px" controls="controls" style="margin-left:auto;margin-right:auto;display:block;">
+                                        <source src="Final Presentation Demo copy.mov"> 
+                                    </video> 
+                                    <label for="message" style="font-size: 30px;">Voting on CR Comments</label>
+                                    <p>
+                                        In order to implement this voting feature, the internal database store of code reviews needed to be updated. 
+                                        Once the upvote button was clicked, the UI needed to receive this and send the user data to the middleware layer.
+                                        This layer unpacked the user info and sent this along with authentication credentials to the Ruby backend, where I 
+                                        made calls to DynamoDB in order to store the voter information in the existing table for code reviews. In order to 
+                                        create an efficient implemetation that calls the server-side as less as possible, I augmented the existing code review table 
+                                        with a new column to store an array of upvoters, dynamically updating this attribute whenever an upvote or remove-upvote request
+                                        came in. <br><br>
+                                        To make calls from the front-end to the middleware, I had to impelement 4 new REST API endpoints that could be 
+                                        intercepted by the middleware. In addition, I had to make many UI changes to support the look of the new button,
+                                        writing new modules in JavaScript and creating the new-look "+1" font. <br><br>
+                                        I also leveraged DynamoDB global secondary indices in order to map upvoters to the CR's they've upvoted, since this 
+                                        lookup would have taken a long time otherwise. This allows for extendability of my project to create useful dashboards 
+                                        so that a user can see all the CR's they've upvoted if that ever becomes a necessity. <br><br>
+                                        Overall, I really enjoyed my full-stack project at Amazon during Summer 2021. My team was very welcoming, 
+                                        and I even got to visit Seattle for a couple weeks during the middle of my internship. When I was there,
+                                        I had a blast! Below is a picture of me in front of the Seattle skyline with some of the friends I made when I was there:
+                                    </p>
+                                    <span class="image main"><img src="images/IMG_4360.jpeg" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
+                                    <p>
+                                        Here's another image of a hike I went on with my mentors. The views around Seattle are truly unforgettable:
+                                    </p>
+                                    <span class="image main"><img src="images/IMG_3607.jpeg" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
 								</div>
-							</section>
+                            </section>
 
 					</div>
 
