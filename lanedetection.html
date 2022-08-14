@@ -31,7 +31,7 @@
 				<nav id="menu">
 					<ul class="links">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="Bharath Sreenivas Resume Feb 26 2021.pdf" target="_blank">Resume</a></li>
+						<li><a href="Resume.pdf" target="_blank">Resume</a></li>
 						<li><a href="index.html#zero">Work Experience</a></li>
 						<li><a href="index.html#two">Outside of School</a></li>
 						<li><a href="index.html#contact">Contact Me</a></li>
@@ -49,9 +49,9 @@
 									</header>
 									<label for="message" style="font-size: 30px;">Overview</label>
 									<p>
-                                        I spent the beginning of Summer 2021 exploring the computer vision space, specifically autonomous vehicles. 
-                                        This project was designed as an introduction to get me acquainted with the concept of car localization. 
-                                        The two parts that I wanted to focus on were lane detection and yaw detection. The below video is an example of lane 
+                                        I spent the beginning of Summer 2021 exploring the computer vision space, specifically autonomous vehicles.
+                                        This project was designed as an introduction to get me acquainted with the concept of car localization.
+                                        The two parts that I wanted to focus on were lane detection and yaw detection. The below video is an example of lane
                                         detection on a road car video on the highway.<br><br>
                                         Take a look at my code <a href="https://github.com/BSreenivas0713/CV-LaneAndYawDetection" target="_blank">here</a>!
 									</p>
@@ -60,19 +60,19 @@
 									<p>
                                         In order to perform lane detection, I first made the frame black and white using a threshold.
                                         Afterwards, I converted this image to a birdseye by using a projection and an OpenCV library function.
-                                        Given the birdseye image, I performed a sliding window search from bottom to top, identifying the 
-                                        left and right lane lines in the image, making a smooth curve using Numpy's polyfit function. 
+                                        Given the birdseye image, I performed a sliding window search from bottom to top, identifying the
+                                        left and right lane lines in the image, making a smooth curve using Numpy's polyfit function.
                                         I then projected this back onto the original image. You can see the result above.
 									</p>
 									<iframe width="800" height="400" style="margin-left:auto;margin-right:auto;display:block;"src="https://youtube.com/embed/wTH6MbjkhVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									<label for="message" style="font-size: 30px;">Yaw Detection</label>
 									<p>
-                                        Yaw is the measure of the car's left and right turning. I wanted to be able to observe this 
-                                        using just the video feed. In order to do this, I used a colorized birdseye view of the image, 
-                                        and I found relevant features in the image using OpenCV's goodFeaturesToTrack function. Between 
-                                        frames, I was able to find a matching to features in the previous frame, and this gave me a delta 
-                                        as to which direction the entire image was moving. I compared this vector with the straight ahead 
-                                        vector in order to determine the car's actual turning amount. You can see this vector as the green 
+                                        Yaw is the measure of the car's left and right turning. I wanted to be able to observe this
+                                        using just the video feed. In order to do this, I used a colorized birdseye view of the image,
+                                        and I found relevant features in the image using OpenCV's goodFeaturesToTrack function. Between
+                                        frames, I was able to find a matching to features in the previous frame, and this gave me a delta
+                                        as to which direction the entire image was moving. I compared this vector with the straight ahead
+                                        vector in order to determine the car's actual turning amount. You can see this vector as the green
                                         arrow in the video above.
 									</p>
 								</div>

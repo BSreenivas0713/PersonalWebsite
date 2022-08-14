@@ -31,7 +31,7 @@
 				<nav id="menu">
 					<ul class="links">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="Bharath Sreenivas Resume Feb 26 2021.pdf" target="_blank">Resume</a></li>
+						<li><a href="Resume.pdf" target="_blank">Resume</a></li>
 						<li><a href="index.html#zero">Work Experience</a></li>
 						<li><a href="index.html#two">Outside of School</a></li>
 						<li><a href="index.html#contact">Contact Me</a></li>
@@ -49,11 +49,11 @@
 									</header>
 									<iframe width="800" height="400" style="margin-left:auto;margin-right:auto;display:block;"src="https://youtube.com/embed/UaUhAYyHwYQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									<label for="message" style="font-size: 30px;">Overview</label>
-									<p>Utilizing the Spotify API in conjunction with Google's NLP API in order 
-										to generate a better emotion classifier, allowing users to view insights 
+									<p>Utilizing the Spotify API in conjunction with Google's NLP API in order
+										to generate a better emotion classifier, allowing users to view insights
 										into their listening history from a new lens. Check out the code <a href="https://github.com/itswin/tartanhacks21" target="_blank">here</a>!
 									</p>
-									
+
 									<label for="message" style="font-size: 30px;">Authentication</label>
 									<p>
 										A user links their Spotify account with our service. On this process, the app generates a json header to send to Spotify.
@@ -68,9 +68,9 @@
 										playlists. The generation of these metrics involve multiple steps.
 										<ol>
 											<li>
-												<b>Lyric Sentiment Analysis</b> - For any set of songs that were being analyzed (whether it be a user's 
+												<b>Lyric Sentiment Analysis</b> - For any set of songs that were being analyzed (whether it be a user's
 												recent 50 songs, or one of their playlists), I contacted the Genius API and retrieved lyrics for all songs in question.
-												After retrieving these lyrics, the service called Google's Natural Language Processing API in order to perform sentiment 
+												After retrieving these lyrics, the service called Google's Natural Language Processing API in order to perform sentiment
 												analysis on these words. This value was one metric utilized in our final score.
 											</li>
 											<br>
@@ -81,12 +81,12 @@
 											<br>
 											<li>
 												<b>Creating Mood Vector</b> - We looked through nearly 100 songs that satisfied each of our moods, and performed
-												these above two calculations on all of these songs. We then used this training dataset to create a baseline mood vector for 
+												these above two calculations on all of these songs. We then used this training dataset to create a baseline mood vector for
 												each of these moods.
 											</li>
 											<br>
 											<li>
-												<b>Classifying Song's Mood</b> - When we get a song's specific vector, we perform an error analysis of this vector 
+												<b>Classifying Song's Mood</b> - When we get a song's specific vector, we perform an error analysis of this vector
 												compared to the standard vectors we created in step 3. Whichever vector has the least error is our mood classification of this song.
 											</li>
 										</ol>
@@ -96,11 +96,11 @@
 									<p>
 										When a user is feeling some specific type of mood, we want them to be able to listen to music that fits that taste.
 										As a result, we developed a feature that allows users to input song types that they are interested in, such as danceability, happiness,
-										tempo, and other features that they might be feeling at the moment. After submitting this form, we generate a 10 or 15-song playlist 
-										that satisfies these requirements. This playlist gets directly added to the user's Spotify profile, so they can immediately enjoy the music 
+										tempo, and other features that they might be feeling at the moment. After submitting this form, we generate a 10 or 15-song playlist
+										that satisfies these requirements. This playlist gets directly added to the user's Spotify profile, so they can immediately enjoy the music
 										of the mood that they're feeling.
 									</p>
-								
+
 								</div>
 							</section>
 

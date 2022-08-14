@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Meta</title>
+		<link rel="shortcut icon" href="images/title icon.png" type="image/png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><span>Bharath Sreenivas</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="Resume.pdf" target="_blank">Resume</a></li>
+						<li><a href="index.html#zero">Work Experience</a></li>
+						<li><a href="index.html#two">Outside of School</a></li>
+						<li><a href="index.html#contact">Contact Me</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Meta: Software Engineering Internship</h1>
+                                    </header>
+                                    <span class="image main"><img src="images/meta-logo.jpg" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
+                                    <label for="message" style="font-size: 30px;">Overview</label>
+                                    <p>
+                                        During Summer 2022, I interned at Meta ono the news recommendations team. This team owns all of the code related to
+										how ranking and recommendations work on the news tab of the Facebook app. One of the features that's currently being built
+										out is user feedback for specific news articles. If the algorithm messes up and gives users an article they do not like,
+										the user can voice that they want to see less of this type of content. Vice versa, a user can say they want to see more of a
+										specific type of content. My project this summer involved taking this feedback and incorporating it less naively into our
+										machine learning ranking stack.
+                                    </p>
+                                    <label for="message" style="font-size: 30px;">User Control on the News Tab</label>
+                                    <p>
+										The current ranking pipeline has two stages: candidate retrieval and the ranking model pass. A bunch of articles are smartly generated via
+										the generation pipeline, and then all of these articles are filtered and then ranked. The final output is a set of articles in the order that
+										they will be presented to the user in the near future.
+										<br><br>
+										I added custom candidate generator pipelines to include news articles that include similar news events to those that users gave a "see more"
+										reaction to. In addition, added new filters to remove news articles from the candidate pool if they shared news events that were similar
+										to those that users gave a "see less" reaction to. This allowed for see more/see less to be more accurately represented in the articles that are
+										outputted from our pipeline.
+										<br><br>
+										The second part of my project involved the actual ranking pass. Currently, there are very few users of these feedback features.
+										Within the user base, there is a good proportion of people that are very heavy users of the feedback features. This means our
+										training dataset is very biased towards heavy users. I performed an extensive analysis to group users into light, medium, and heavy
+										buckets based on their article hide usage. I then trained a new model with a custom demotion for training samples
+										based on the article hide usage of that sample's user. This allowed the model to be more accurate for light and medium user
+										groups. I noticed a 3% increase in model AUC, and improvement in precision and recall for light and medium user groups after online experimentation.
+										<br><br>
+										I enjoyed my internship a lot in Summer 2022! This was the first in-person experience I'd ever had, and I really made the most of it
+										living in New York City. I would love to come back to this city again soon!
+                                    </p>
+								</div>
+                            </section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<label for="message">Follow</label>
+						<ul class="icons">
+							<li><a href="http://instagram.com/bsreenivas0713" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="http://github.com/BSreenivas0713" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="http://www.linkedin.com/in/bsreenivas/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Bharath Sreenivas. All rights reserved</li>
+							<!-- <li>Design: <a href="https://html5up.net">HTML5 UP</a></li> -->
+							<p class="pull-right" style="color: rgba(244, 244, 255, 0.2);"><a href="#">Back to top</a></p>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

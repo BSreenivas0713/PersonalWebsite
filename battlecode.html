@@ -31,7 +31,7 @@
 				<nav id="menu">
 					<ul class="links">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="Bharath Sreenivas Resume Feb 26 2021.pdf" target="_blank">Resume</a></li>
+						<li><a href="Resume.pdf" target="_blank">Resume</a></li>
 						<li><a href="index.html#zero">Work Experience</a></li>
 						<li><a href="index.html#two">Outside of School</a></li>
 						<li><a href="index.html#contact">Contact Me</a></li>
@@ -45,36 +45,55 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Battlecode 2021</h1>
+										<h1>Battlecode 2022</h1>
 									</header>
-									<span class="image main"><img src="images/certificate.png" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
+									<span class="image main"><img src="images/battlecode_comp.png" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
 									<label for="message" style="font-size: 30px;">Overview</label>
-									<p>Battlecode 2021 project, where three friends and I programmed an automated 
-										robot player to play in the Battlecode competition. 
-										Qualified for finals and placed 9th among 250+ teams 
-										internationally. You can see a sample match of our robot (red) vs another qualified team Monky (blue) below.
-										<br><br>
-										Check out the code 
-										<a href="https://github.com/BSreenivas0713/Battlecode2021" target="_blank">here</a>!
-										For a more in-depth explanation of the game and our player, check out our
-										<a href="BattleCode2021.pdf" target="_blank">post-mortem</a>!
-									</p>
-									<iframe width="800" height="400" style="margin-left:auto;margin-right:auto;display:block;"src="https://youtube.com/embed/WZrlJAE3LKw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<label for="message" style="font-size: 30px;">Game Overview</label>
 									<p>
 										Battlecode is an MIT AI competition run every year throughout the month of January. At
 										the beginning of the month, they release a new 2 player game, at which point teams have to
 										code up a bot that plays said game. There are multiple tournaments throughout the month,
 										ending in a tournament for the top 16 teams out of the hundreds that submit code for cash
 										prizes.
+										<br><br>
+										This is my battlecode 2022 project, where three friends and I programmed an automated
+										robot player to play in the Battlecode competition.
+										Qualified for finals and placed 7th among 250+ teams
+										internationally.
+										<br><br>
+										Check out the code
+										<a href="https://github.com/BSreenivas0713/Battlecode2022" target="_blank">here</a>!
+										For a more in-depth explanation of the game and our player, check out our
+										<a href="Battlecode2022.pdf" target="_blank">post-mortem</a>!
+										<br><br>
+										Read about some of the cool engineering we had to do below, since I also competed in Battlecode in 2021!
 									</p>
+								</div>
+							</section>
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h1>Battlecode 2021</h1>
+									</header>
+									<span class="image main"><img src="images/certificate.png" alt="" style="height:400px;width:auto;margin-left: auto;margin-right:auto;"/></span>
+									<label for="message" style="font-size: 30px;">Overview</label>
+									<p>
+										Qualified for finals and placed 9th among 250+ teams
+										internationally. You can see a sample match of our robot (red) vs another qualified team Monky (blue) below.
+										<br><br>
+										Check out the code
+										<a href="https://github.com/BSreenivas0713/Battlecode2021" target="_blank">here</a>!
+										For a more in-depth explanation of the game and our player, check out our
+										<a href="BattleCode2021.pdf" target="_blank">post-mortem</a>!
+									</p>
+									<iframe width="800" height="400" style="margin-left:auto;margin-right:auto;display:block;"src="https://youtube.com/embed/WZrlJAE3LKw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 									<label for="message" style="font-size: 30px;">Communication</label>
 									<p>
-										The rules were very restrictive about the communication that troops could use between 
+										The rules were very restrictive about the communication that troops could use between
 										each other. As a result, we were forced to use only 24 bits for one troop to communicate
-										with another one. Coordinating attacks with these semantics were difficult, but we were 
-										able to come up with a smart solution, where we used bit-packing to encode the type of 
+										with another one. Coordinating attacks with these semantics were difficult, but we were
+										able to come up with a smart solution, where we used bit-packing to encode the type of
 										message being sent in the top 6 bits, and actual information in the bottom 18 bits. For example,
 										we needed to encode the location of enemies, so we were able to store a dx and dy from home base inside
 										these bit-packed messages.
@@ -83,15 +102,15 @@
 									<label for="message" style="font-size: 30px;">Custom Libraries</label>
 									<p>
 										There were also strict bytecode limits in the rules. This meant that we could not use any
-										standard libraries that Java provided, as they incurred too much overhead. We had to 
-										develop our own map and set libraries. This involved using StringBuilder and separating 
-										keys and values by a simple caret symbol. StringBuilder operations were not costly, so we were 
+										standard libraries that Java provided, as they incurred too much overhead. We had to
+										develop our own map and set libraries. This involved using StringBuilder and separating
+										keys and values by a simple caret symbol. StringBuilder operations were not costly, so we were
 										now able to resume standard use of maps and sets after implementing this framework.
 									</p>
 
 									<label for="message" style="font-size: 30px;">Strategy</label>
 									<p>
-										For in-depth information about our strategy, please take a look at our 
+										For in-depth information about our strategy, please take a look at our
 										<a href="BattleCode2021.pdf" target="_blank">post-mortem</a>!
 									</p>
 								</div>
